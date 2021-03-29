@@ -6,8 +6,8 @@ int main(){
 	int x[n],y[n]={},z[n];
 	for(i=0;i<n;i++)
 		scanf("%d",&x[i]);
-	for(i=0;i<n;i++){
 		k=1;
+	for(i=0;i<n;i++){
 		for(j=k;j<n;j++){
 			if(x[i]==x[j]){
 				y[i]++;	
@@ -15,6 +15,8 @@ int main(){
 		}
 		k++;
 	}
+	//for(i=0;i<n;i++)
+		//printf("%d ",y[i]);
 	l=y[0];
 	for(i=1;i<n;i++){
 		if(l<y[i]){
@@ -23,22 +25,27 @@ int main(){
 		}
 	}
 	z[0]=x[m];
+	//printf("%d ",z[0]);
 	for(i=0,j=1;i<n;i++){
 		if(l==y[i]){
 			z[j]=x[i];
+			printf("%d %d ",z[j],j);
 			j++;
+			
 		}		
 	}
-	for(i=0;i<j;i++){
-		k=1;
+	//printf("%d ",j);
+	k=2;
+	for(i=1;i<j;i++){
 		for(l=k;l<j;l++){
 			if(z[i]>z[l]){
 				z[i]=z[l];
 				z[i+1]=z[i];
 			}
 		}
+		k++;
 	}
-	for(i=0;i<j;i++)
+	for(i=1;i<j;i++)
 		printf("%d ",z[i]);
 	return 0;
 }
