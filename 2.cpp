@@ -29,13 +29,16 @@ int main(){
 			j++;
 		}		
 	}
-	l=z[0];
 	for(i=0;i<j;i++){
-		for(k=1;k<j;k++){
-			if(z[i]>z[k]){
-				
+		k=1;
+		for(l=k;l<j;l++){
+			if(z[i]>z[l]){
+				z[i]=z[l];
+				z[i+1]=z[i];
 			}
 		}
 	}
+	for(i=0;i<j;i++)
+		printf("%d ",z[i]);
 	return 0;
 }
