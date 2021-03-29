@@ -1,8 +1,9 @@
 #include<stdio.h>
 int main(){
-	int n[3],i,j,m1,m2,m3;
+	int n[3]={1,1,1},i,j,m1,m2,m3;
 	for(i=0;i<3;i++)
-		scanf("%d",&n[i]);
+		if(n[i]<=20)
+			scanf("%d",&n[i]);
 	printf("\n");
 	int x[n[0]][n[0]],y[n[1]][n[1]],z[n[2]][n[2]];
 	int s1[n[0]*2]={},s2[n[1]*2]={},s3[n[2]*2]={};
