@@ -1,6 +1,6 @@
 #include<stdio.h>
 int main(){
-	int n=2,i,j,k,l,m=0;
+	int n=2,i,j,k,l,m=0,a;
 	if(n>=2&&n<=1000)
 		scanf("%d",&n);
 	int x[n],y[n]={},z[n];
@@ -29,7 +29,7 @@ int main(){
 	for(i=0,j=1;i<n;i++){
 		if(l==y[i]){
 			z[j]=x[i];
-			printf("%d %d ",z[j],j);
+			//printf("%d %d ",z[j],j);
 			j++;
 			
 		}		
@@ -39,8 +39,11 @@ int main(){
 	for(i=1;i<j;i++){
 		for(l=k;l<j;l++){
 			if(z[i]>z[l]){
-				z[i]=z[l];
+				a=z[l];
 				z[i+1]=z[i];
+				z[i]=a;
+				
+				//printf("%d %d",z[i],z[i+1]);
 			}
 		}
 		k++;
